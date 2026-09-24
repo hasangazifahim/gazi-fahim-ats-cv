@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gazi Fahim Hasan — SEO Opportunity Tracker & Cover Letters</title>
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --primary-light: #DBEAFE;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.5; padding: 24px 20px 60px; }
+    .header-bar { max-width: 1200px; margin: 0 auto 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .header-title h1 { font-size: 22px; font-weight: 800; color: var(--text-main); }
+    .header-title p { font-size: 13px; color: var(--text-muted); }
+    .action-links { display: flex; gap: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px; font-size: 12.5px; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid var(--border); background: #FFF; color: var(--text-main); transition: all 0.15s; }
+    .btn-primary { background: var(--primary); color: #FFF; border-color: var(--primary); }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    
+    .nav-tabs { max-width: 1200px; margin: 0 auto 16px; display: flex; gap: 8px; border-bottom: 2px solid var(--border); padding-bottom: 2px; }
+    .tab-btn { background: none; border: none; padding: 10px 18px; font-size: 13.5px; font-weight: 700; color: var(--text-muted); cursor: pointer; border-radius: 6px 6px 0 0; transition: all 0.15s; }
+    .tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); background: #FFF; }
+    
+    .tab-content { max-width: 1200px; margin: 0 auto; background: #FFF; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid var(--border); overflow: hidden; display: none; }
+    .tab-content.active { display: block; }
+    
+    .table-container { overflow-x: auto; width: 100%; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; text-align: left; }
+    th { background: #0F172A; color: #FFF; font-weight: 700; padding: 12px 14px; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; white-space: nowrap; }
+    td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; color: #334155; }
+    tr:nth-child(even) td { background: #F8FAFC; }
+    tr:hover td { background: #F1F5F9; }
+    td a { color: #2563EB; font-weight: 600; text-decoration: none; word-break: break-all; }
+    td a:hover { text-decoration: underline; }
+    
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 10.5px; font-weight: 700; }
+    .badge-ready { background: #DEF7EC; color: #03543F; }
+    .badge-explore { background: #FEF08A; color: #713F12; }
+    
+    .letter-card { padding: 20px; border-bottom: 1px solid var(--border); }
+    .letter-card:last-child { border-bottom: none; }
+    .letter-title { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+    .letter-subject { font-size: 12.5px; font-weight: 600; color: var(--text-main); margin-bottom: 10px; background: #F1F5F9; padding: 6px 10px; border-radius: 6px; }
+    .letter-body { background: #F8FAFC; border: 1px solid var(--border); border-radius: 8px; padding: 14px; font-family: -apple-system, BlinkMacSystemFont, monospace; font-size: 11.5px; line-height: 1.6; white-space: pre-wrap; color: #1E293B; }
+    .copy-btn { padding: 4px 10px; font-size: 11px; cursor: pointer; border-radius: 6px; border: 1px solid var(--border); background: #FFF; font-weight: 600; }
+    .copy-btn:hover { background: var(--primary); color: #FFF; }
+    
+    .toast { position: fixed; bottom: 20px; right: 20px; background: #0F172A; color: #FFF; padding: 10px 18px; border-radius: 8px; font-size: 12px; font-weight: 600; display: none; z-index: 1000; }
+  </style>
+</head>
+<body>
+
+  <div class="header-bar">
+    <div class="header-title">
+      <h1>Gazi Fahim Hasan — SEO Opportunity Tracker</h1>
+      <p>Target Opportunities • Custom Application Pitches • Live Search Feeds</p>
+    </div>
+    <div class="action-links">
+      <a class="btn btn-primary" href="Gazi_Fahim_Hasan_SEO_Job_Tracker.xlsx" download>
+        ⬇️ Download Excel / Google Sheet (.xlsx)
+      </a>
+      <a class="btn" href="Gazi_Fahim_Hasan_ATS_CV.pdf" target="_blank">
+        📄 View ATS CV
+      </a>
+    </div>
+  </div>
+
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="switchTab('tab-opportunities', this)">1. Target Opportunities</button>
+    <button class="tab-btn" onclick="switchTab('tab-letters', this)">2. Sample Cover Letters</button>
+    <button class="tab-btn" onclick="switchTab('tab-feeds', this)">3. Live Search Feeds</button>
+  </div>
+
+  <div id="tab-opportunities" class="tab-content active">
+    <div class="table-container">
+      <table>
+        <thead><tr>
+<th>Company Name</th><th>Target Role</th><th>Location / Hours</th><th>Comp Range / Rate</th><th>Application Link / Website</th><th>Core Focus &amp; Tech Stack</th><th>Why You Match (Portfolio Evidence)</th><th>Status</th><th>Date Added</th><th>Strategy &amp; Action Notes</th></tr></thead><tbody><tr><td>Daniyal Technologies</td><td>SEO Analyst (Remote)</td><td>Remote / Delaware (Standard EST Hours)</td><td>$600 - $2,500 / month</td><td><a href="https://career.daniyaltechnologies.com/o/seo-analyst" target="_blank">https://career.daniyaltechnologies.com/o/seo-analyst</a></td><td>Local SEO, Google Business Profile (GBP), JavaScript/Next.js SEO, Schema Markup, GA4 &amp; GSC</td><td>Direct match for Healthcare Map Pack case study (#1 in 8 regions, +185% calls) and B.Sc CSE foundation for JS rendering.</td><td><span class="badge badge-ready">Ready to Apply</span></td><td>2026-09-24</td><td>Apply via custom pitch in Tab 2 highlighting code-level understanding of Next.js and GBP multi-location execution.</td></tr><tr><td>Mediboost</td><td>Remote SEO Specialist</td><td>Remote / Global Agency</td><td>$1,500 - $2,500 / month (est.)</td><td><a href="https://www.mediboost.com.au/" target="_blank">https://www.mediboost.com.au/</a></td><td>Local SEO, Healthcare/Medical Clinics, GBP Listings, Localized Landing Pages, On-Page SEO</td><td>100% thematic fit for your healthcare multi-location SEO case study and citation consistency across 60+ directories.</td><td><span class="badge badge-ready">Ready to Apply</span></td><td>2026-09-24</td><td>Medical marketing agency specializing in clinics. Pitch your proven healthcare patient-acquisition track record.</td></tr><tr><td>Jetfuel Agency</td><td>Remote SEO Analyst</td><td>Remote / North America Agency</td><td>$1,500 - $3,000 / month</td><td><a href="https://jetfuel.agency/" target="_blank">https://jetfuel.agency/</a></td><td>E-Commerce &amp; DTC SEO, Screaming Frog Audits, Search Console, Ahrefs, High-ROI Search Campaigns</td><td>Direct alignment with your Scaleup E-Commerce case study (+340% traffic lift, 142 top-3 keywords, 1,200+ crawl fixes).</td><td><span class="badge badge-ready">Ready to Apply</span></td><td>2026-09-24</td><td>Specializes in Shopify and DTC e-commerce. Highlight technical crawl resolution and structured data.</td></tr><tr><td>Rocket Clicks</td><td>Associate / SEO Specialist</td><td>Remote / US Agency</td><td>$1,600 - $2,000 / month</td><td><a href="https://www.rocketclicks.com/careers/" target="_blank">https://www.rocketclicks.com/careers/</a></td><td>Technical SEO, GSC &amp; GA4 Reporting, Core Web Vitals, Competitive Intelligence</td><td>Matches your GA4/Looker Studio dashboarding experience and +340% organic growth track record.</td><td><span class="badge badge-ready">Ready to Apply</span></td><td>2026-09-24</td><td>US performance agency with established remote training and transparent client reporting culture.</td></tr><tr><td>Silverback Strategies</td><td>Remote SEO Analyst</td><td>Remote / US (EST Focus)</td><td>$2,000 - $3,500 / month</td><td><a href="https://silverbackstrategies.com/careers/" target="_blank">https://silverbackstrategies.com/careers/</a></td><td>Technical SEO Architecture, AI Search Adaptation, Entity SEO, Cross-Functional Agency Work</td><td>Fits your Computer Science background and experience with AI Search / SGE content optimization.</td><td><span class="badge badge-explore">Exploring</span></td><td>2026-09-24</td><td>Well-regarded mid-size agency managing high-growth brands. Emphasize team leadership at Scaleup Ads Agency.</td></tr><tr><td>Powered by Search</td><td>SEO &amp; Organic Growth Strategist</td><td>Remote / North America &amp; Global</td><td>$2,500 - $4,500 / month</td><td><a href="https://www.poweredbysearch.com/careers/" target="_blank">https://www.poweredbysearch.com/careers/</a></td><td>B2B SaaS SEO, Product-Led Growth, Technical Crawls, High-Intent Keyword Mapping</td><td>Direct alignment with your B2B SaaS case study (98/100 Lighthouse score, +210% signups lift).</td><td><span class="badge badge-explore">Exploring</span></td><td>2026-09-24</td><td>Leading B2B SaaS marketing consultancy. Emphasize conversion-focused SEO and pipeline contribution.</td></tr><tr><td>HireLATAM / US Agency Retainers</td><td>Local SEO &amp; GBP Contractor</td><td>Remote / US Timezones</td><td>$1,500 - $2,200 / month</td><td><a href="https://hirelatam.com/" target="_blank">https://hirelatam.com/</a></td><td>Multi-Location Google Business Profiles, Local Citations, NAP Consistency, Review Management</td><td>Matches your 8-location Map Pack domination case study and multi-branch client management.</td><td><span class="badge badge-explore">Exploring</span></td><td>2026-09-24</td><td>US agencies outsourcing client portfolios of home service businesses (plumbing, roofing, legal).</td></tr><tr><td>Eneba</td><td>On-Page SEO Specialist</td><td>Remote / Global</td><td>$1,800 - $3,000 / month</td><td><a href="https://www.eneba.com/jobs" target="_blank">https://www.eneba.com/jobs</a></td><td>Large-Scale E-Commerce, Keyword Taxonomy, Search Intent &amp; Entity Mapping</td><td>Matches your experience restructuring large catalog taxonomies and resolving canonical duplicates.</td><td><span class="badge badge-explore">Exploring</span></td><td>2026-09-24</td><td>Global digital gaming marketplace with massive organic search catalog volume.</td></tr><tr><td>REGEX SEO</td><td>SEO Analyst / Specialist</td><td>Remote / Agency Accounts</td><td>$1,500 - $2,500 / month</td><td><a href="https://www.regexseo.com/careers/" target="_blank">https://www.regexseo.com/careers/</a></td><td>Technical SEO Audits, Schema.org Markup, Link Building, Keyword Clustering</td><td>Matches your full-stack SEO execution: on-page, off-page, technical architecture, and team supervision.</td><td><span class="badge badge-explore">Exploring</span></td><td>2026-09-24</td><td>Boutique digital agency hiring technical search specialists for ongoing international client work.</td></tr></tbody></table></div></div><div id="tab-letters" class="tab-content">
+    <div class="letter-card">
+      <div class="letter-title">
+        <span>Daniyal Technologies Custom Pitch (SEO Analyst (Local &amp; Technical))</span>
+        <button class="copy-btn" onclick="copyLetter('letter_Daniyal_Technologies_Custom_Pitch')">📋 Copy Letter</button>
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px;"><strong>Usage:</strong> Submit directly on career.daniyaltechnologies.com/o/seo-analyst or email application</p>
+      <div class="letter-subject"><strong>Subject:</strong> Application for SEO Analyst (Remote) — Gazi Fahim Hasan</div>
+      <div class="letter-body" id="letter_Daniyal_Technologies_Custom_Pitch">Dear Hiring Team at Daniyal Technologies,
+
+I am writing to express my strong interest in the remote SEO Analyst position. With 4+ years of hands-on SEO execution, an active role as SEO Executive at Scaleup Ads Agency, and a Bachelor&#x27;s in Computer Science &amp; Engineering, I bridge the gap between Local SEO dominance and deep technical/JavaScript architecture.
+
+Here is how my background aligns with your core requirements:
+
+1. Local SEO &amp; Google Business Profile (GBP) Expertise:
+• Multi-Location Case Study: Optimized local presence for a multi-branch healthcare group across 60+ directories with LocalBusiness JSON-LD markup and geo-coordinates, securing #1 Google Map Pack rankings across 8 major regions and driving a +185% increase in direct calls.
+• Proactive GBP maintenance: Post scheduling, review management systems, category refinement, and continuous local citation audits.
+
+2. Technical &amp; JavaScript SEO (Computer Science Foundation):
+• Unlike non-technical marketers, my B.Sc. in Computer Science allows me to diagnose indexing, rendering, and hydration bottlenecks on modern JavaScript frameworks (React / Next.js).
+• Core Web Vitals Overhaul: Raised a client platform&#x27;s Google Lighthouse score from 64 to 98/100, lifting qualified conversions by +210%.
+• Resolved 1,200+ crawl errors, canonical loops, and redirect chains using Screaming Frog and Google Search Console.
+
+3. Analytics &amp; Modern Search Strategy:
+• Daily power user of Google Search Console, Google Analytics 4 (GA4), Ahrefs, and SEMrush.
+• Familiar with AI Overviews (SGE), Entity SEO, and topical semantic clusters that protect rankings against algorithm shifts.
+
+I am fully prepared to support standard EST business hours, collaborate across international time zones, and deliver measurable organic search ROI from day one.
+
+Portfolio &amp; Case Studies: https://gazifahimhasan.com
+GitHub: https://github.com/hasangazifahim
+Contact: gazifahimhasan1@gmail.com | +880 1857571304
+
+Thank you for your time and consideration. I look forward to speaking with you!
+
+Sincerely,
+Gazi Fahim Hasan</div>
+      <p style="font-size: 11px; color: #64748B; margin-top: 6px;"><em>Customization Tip: Tailored for EST schedule, Next.js / JavaScript SEO, and Map Pack LocalBusiness schema.</em></p>
+    </div>
+    
+    <div class="letter-card">
+      <div class="letter-title">
+        <span>Local SEO &amp; Agency Multi-Location Pitch (Local SEO Specialist / GBP Manager)</span>
+        <button class="copy-btn" onclick="copyLetter('letter_Local_SEO_&_Agency_Multi-Location_Pitch')">📋 Copy Letter</button>
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px;"><strong>Usage:</strong> For medical, home services, legal, or multi-location agency roles (e.g. Mediboost, HireLATAM)</p>
+      <div class="letter-subject"><strong>Subject:</strong> Application: Local SEO &amp; Google Business Profile Specialist — Gazi Fahim Hasan</div>
+      <div class="letter-body" id="letter_Local_SEO_&_Agency_Multi-Location_Pitch">Dear Hiring Manager,
+
+I am writing to apply for the Local SEO Specialist position. If your agency is looking for a data-driven specialist who can take clients to #1 in the Google 3-Pack and keep them there, my track record delivers exactly that.
+
+Key Local SEO Accomplishments:
+• Multi-Location Dominance: Took an 8-location healthcare group from fragmented visibility to #1 Google Map Pack rankings across all 8 target regions, driving a +185% increase in direct calls and appointment bookings.
+• NAP &amp; Citation Integrity: Cleaned up and standardized NAP citations across 60+ leading directories (BrightLocal, Apple Maps, Bing Places, Yelp) with zero duplicate conflicts.
+• Technical Local Architecture: Implemented LocalBusiness and MedicalClinic Schema.org JSON-LD structured data with precise geo-coordinates, entity relationships, and service menus.
+• Proactive GBP Growth: Engineered weekly post strategies, review generation workflows, and category optimizations to defend local share against aggressive competitors.
+
+As an SEO Executive managing high-tempo agency accounts, I know how to deliver clear, conversion-focused reporting in GA4 and Looker Studio that clients understand and appreciate.
+
+Portfolio: https://gazifahimhasan.com
+Contact: gazifahimhasan1@gmail.com | +880 1857571304
+
+I welcome the opportunity to discuss how I can elevate your local search portfolio.
+
+Best regards,
+Gazi Fahim Hasan</div>
+      <p style="font-size: 11px; color: #64748B; margin-top: 6px;"><em>Customization Tip: Highlight client niche (dental, legal, roofing) and specific local review/citation challenges.</em></p>
+    </div>
+    
+    <div class="letter-card">
+      <div class="letter-title">
+        <span>Technical SEO &amp; SaaS / E-Commerce Pitch (Technical SEO Analyst / Specialist)</span>
+        <button class="copy-btn" onclick="copyLetter('letter_Technical_SEO_&_SaaS_/_E-Commerce_Pitch')">📋 Copy Letter</button>
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px;"><strong>Usage:</strong> For B2B SaaS, e-commerce, or marketplace roles (e.g. Jetfuel Agency, Powered by Search, Eneba)</p>
+      <div class="letter-subject"><strong>Subject:</strong> Application: Technical SEO Specialist — Gazi Fahim Hasan (B.Sc. CSE)</div>
+      <div class="letter-body" id="letter_Technical_SEO_&_SaaS_/_E-Commerce_Pitch">Dear Hiring Team,
+
+I am reaching out regarding the Technical SEO Specialist opening. As a Computer Science &amp; Engineering graduate and practicing SEO Executive at Scaleup Ads Agency, I bring an algorithmic, code-level approach to organic search growth.
+
+Proven Technical Achievements:
+• Core Web Vitals &amp; JS SEO: Architected technical performance overhaul for a SaaS platform, elevating Google Lighthouse score from 64 to 98/100 and generating +210% demo signups.
+• Large-Scale E-Commerce Growth: Delivered a +340% organic traffic explosion and moved 142 high-competition keywords into Google Top 3 by restructuring product taxonomy and eliminating 1,200+ canonical errors.
+• Rich Snippets &amp; Schema: Deployed robust JSON-LD architectures (Product, Organization, FAQ, Article, Breadcrumbs) to capture enhanced SERP real estate and lift commercial CTR.
+• Algorithmic Foundation: Deep structural understanding of search engine crawling bots, JavaScript rendering (React / Next.js), server status codes, and indexation hygiene.
+
+I combine deep technical troubleshooting in Screaming Frog and GSC with commercial keyword intent mapping in Ahrefs and SEMrush.
+
+Portfolio &amp; Case Studies: https://gazifahimhasan.com
+GitHub: https://github.com/hasangazifahim
+Contact: gazifahimhasan1@gmail.com | +880 1857571304
+
+I look forward to discussing how my technical background can accelerate your organic pipeline.
+
+Sincerely,
+Gazi Fahim Hasan</div>
+      <p style="font-size: 11px; color: #64748B; margin-top: 6px;"><em>Customization Tip: Mention CMS/Stack (Shopify, WordPress, Next.js, Headless) and organic revenue impact.</em></p>
+    </div>
+    
+    <div class="letter-card">
+      <div class="letter-title">
+        <span>Direct LinkedIn / Cold Email Outreach Pitch (Any Remote SEO Role)</span>
+        <button class="copy-btn" onclick="copyLetter('letter_Direct_LinkedIn_/_Cold_Email_Outreach_Pitch')">📋 Copy Letter</button>
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px;"><strong>Usage:</strong> For reaching out to Agency Founders, SEO Directors, or Recruiters on LinkedIn / Email (100 words)</p>
+      <div class="letter-subject"><strong>Subject:</strong> SEO Specialist with B.Sc. CSE &amp; +340% Traffic Track Record</div>
+      <div class="letter-body" id="letter_Direct_LinkedIn_/_Cold_Email_Outreach_Pitch">Hi [Name],
+
+I saw you&#x27;re expanding your SEO team at [Company Name] and wanted to connect. 
+
+I&#x27;m an SEO Executive with a B.Sc. in Computer Science &amp; Engineering. I specialize in merging deep technical crawl architecture (Core Web Vitals, JS SEO, Schema) with conversion-driven Local &amp; On-Page SEO:
+
+• Scaled e-commerce client organic traffic by +340% with 140+ keywords in Google Top 3
+• Ranked 8 healthcare locations #1 in Google Map Pack (+185% calls lift)
+• Resolved 1,200+ crawl errors &amp; boosted SaaS Lighthouse score to 98/100
+
+Are you open to a brief chat this week to see if my background fits your current search targets?
+
+Portfolio: https://gazifahimhasan.com
+Best,
+Gazi Fahim Hasan</div>
+      <p style="font-size: 11px; color: #64748B; margin-top: 6px;"><em>Customization Tip: Insert recipient name and company name. Keep concise for quick reading on mobile.</em></p>
+    </div>
+    </div>
+  <div id="tab-feeds" class="tab-content">
+    <div class="table-container">
+      <table>
+        <thead><tr>
+<th>Platform Name</th><th>Target Specialty</th><th>Exact Recommended Search Query</th><th>Direct Clickable Job Search URL</th><th>Check Frequency</th><th>Pro-Tip &amp; Filtering Guidance</th></tr></thead><tbody><tr><td>Indeed Remote</td><td>Local SEO &amp; SEO Analyst</td><td>&quot;SEO Analyst&quot; OR &quot;Local SEO&quot; remote</td><td><a href="https://www.indeed.com/jobs?q=%22SEO+Analyst%22+OR+%22Local+SEO%22+remote&l=Remote" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>Daily</td><td>Filter by &#x27;Date Posted: Last 3 days&#x27;. Excellent for US digital marketing agencies hiring offshore specialists.</td></tr><tr><td>Indeed Remote</td><td>Technical SEO Specialist</td><td>&quot;Technical SEO&quot; remote &quot;Search Console&quot;</td><td><a href="https://www.indeed.com/jobs?q=%22Technical+SEO%22+remote+%22Search+Console%22&l=Remote" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>2x / Week</td><td>Focus on listings mentioning site migrations, Core Web Vitals, or schema markup where your CSE degree stands out.</td></tr><tr><td>Dynamite Jobs</td><td>Vetted Remote SEO Roles</td><td>Category: SEO / Marketing (100% Remote)</td><td><a href="https://dynamitejobs.com/remote-seo-jobs" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>2x / Week</td><td>Every job is 100% verified remote. Look for boutique agencies like Silverback, Mediboost, and Jetfuel Agency.</td></tr><tr><td>We Work Remotely</td><td>Organic Growth &amp; SEO</td><td>Category: Remote Marketing Jobs</td><td><a href="https://weworkremotely.com/categories/remote-marketing-jobs" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>2x / Week</td><td>High-caliber tech and agency listings (Powered by Search, Animalz). Great for higher comp brackets ($2k-$4k+/mo).</td></tr><tr><td>Himalayas</td><td>Remote-First SEO Roles</td><td>Role: SEO Specialist / Analyst</td><td><a href="https://himalayas.app/jobs/seo" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>Weekly</td><td>Modern remote-first companies. Transparent salary ranges and time-zone requirements clearly displayed.</td></tr><tr><td>LinkedIn Jobs</td><td>Remote SEO Analyst (Worldwide)</td><td>Keywords: SEO Analyst Local SEO | Filter: Remote</td><td><a href="https://www.linkedin.com/jobs/search/?keywords=SEO%20Analyst%20Local%20SEO&f_WT=2" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>Daily</td><td>Set an alert for &#x27;SEO Analyst Remote&#x27;. Apply within the first 24 hours of posting for maximum visibility.</td></tr><tr><td>SEOjobs.com</td><td>Niche SEO Job Board</td><td>Search: Local SEO / Technical SEO</td><td><a href="https://seojobs.com/" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>Weekly</td><td>Curated exclusively for search marketing professionals. Quality over quantity.</td></tr><tr><td>Upwork Project Search</td><td>High-Ticket Local SEO Audits</td><td>Query: &#x27;Local SEO&#x27; OR &#x27;Technical SEO Audit&#x27; ($1k+)</td><td><a href="https://www.upwork.com/nx/search/jobs/?q=local%20seo%20audit" target="_blank" style="font-weight:700;">Open Search Feed ↗</a></td><td>Daily</td><td>Great for adding immediate $1,000–$2,000 monthly retainers alongside full-time agency work.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function copyLetter(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Cover letter copied to clipboard!');
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 2000);
+    }
+  </script>
+</body>
+</html>
